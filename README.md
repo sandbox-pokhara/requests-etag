@@ -8,6 +8,15 @@ Wrapper over requests package to support etag caching by default
 pip install requests-etag
 ```
 
+## Quickstart
+
+```python
+import requests_etag
+
+res = requests_etag.get('https://example.com/')
+print(res.status_code)
+```
+
 ## Usage
 
 ```python
@@ -16,12 +25,12 @@ pip install requests-etag
 >>> res.status_code
 200
 >>> len(res.text)
-1527903
+1256
 >>> res = requests_etag.get('https://example.com/') # cached
 >>> res.status_code
 304
 >>> len(res.text)
-1527903
+1256
 ```
 
 ## Configuration
